@@ -12,11 +12,14 @@ const dev = {
     USER_POOL_ID: "us-east-2_hhBPIOPkZ",
     APP_CLIENT_ID: "662712ndogqnotgq02c5v7pmdr",
     IDENTITY_POOL_ID: "us-east-2:8f1434c3-90e4-4f8d-a45e-8203b1ec9f2a"
-  }
+  },
+  STRIPE_KEY: "pk_test_56VFAcEKqmW60sJdmfAb0bFs"
 };
 
 const prod = {
   // provide details of production environment as above
+  // use live keys here
+  STRIPE_KEY: "pk_test_56VFAcEKqmW60sJdmfAb0bFs"
 }
 
 //Default to dev if not set

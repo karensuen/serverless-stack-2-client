@@ -10,6 +10,7 @@
 
 # Production context: All deploys to the main
 # repository branch will inherit these settings.
+# NOTE: currently set to dev stage as prod backend not configured
 [context.production]
   command = "REACT_APP_STAGE=dev npm run build:netlify"
 

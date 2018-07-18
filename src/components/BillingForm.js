@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { FormGroup, FormControl, ControlLabel } from "react-boostrap";
+import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import { CardElement, injectStripe } from "react-stripe-elements";
-import LoadingButton from "./LoaderButton";
+import LoaderButton from "./LoaderButton";
 import "./BillingForm.css";
 
 class BillingForm extends Component {
@@ -52,6 +52,7 @@ class BillingForm extends Component {
 
   render() {
     const loading = this.state.isProcessing || this.props.loading;
+
     // Fields form for inputting payment info
     // 1. Number of notes to store
     // 2. Name on the credit card
@@ -74,7 +75,7 @@ class BillingForm extends Component {
         </FormGroup>
         <hr />
         <FormGroup bsSize="large" controlId="name">
-          <ControlLabel>Cardholder&apos;s name </ControlLabel>
+          <ControlLabel>Cardholder&apos;s name</ControlLabel>
           <FormControl
             type="text"
             value={this.state.name}
@@ -86,8 +87,8 @@ class BillingForm extends Component {
         <CardElement
           className="card-field"
           onChange={this.handleCardFieldChange}
-          stype={{
-            base: { fontSize: "18px", fontFamily: '"Open Sans", sans-serif'}
+          style={{
+            base: { fontSize: "18px", fontFamily: '"Open Sans", sans-serif' }
           }}
         />
         <LoaderButton
@@ -96,7 +97,7 @@ class BillingForm extends Component {
           type="submit"
           text="Purchase"
           isLoading={loading}
-          loadingText="Purchasing..."
+          loadingText="Purchasing…"
           disabled={!this.validateForm()}
         />
       </form>
